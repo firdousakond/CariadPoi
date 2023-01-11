@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CariadTest</string>
+    <string name="title">Title:</string>
+    <string name="address">Address:</string>
+    <string name="charging_point_number">No. of Charging Point:</string>
+    <string name="msg_no_internet">No internet found! Please connect to internet</string>
+</resources>

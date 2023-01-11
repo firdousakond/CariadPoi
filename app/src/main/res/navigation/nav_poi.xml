@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_poi"
+    app:startDestination="@id/poiMapFragment">
+
+    <fragment
+        android:id="@+id/poiMapFragment"
+        android:name="com.firdous.cariadtest.ui.PoiMapFragment"
+        android:label="PoiMapFragment"
+        tools:layout="@layout/fragment_poi_map"
+        />
+
+    <fragment
+        android:id="@+id/poiDetailsFragment"
+        android:name="com.firdous.cariadtest.ui.PoiDetailsFragment"
+        android:label="PoiDetailsFragment"
+        tools:layout="@layout/fragment_poi_details"
+        />
+
+</navigation>
