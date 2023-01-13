@@ -6,11 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.firdous.cariadtest.R
 import com.firdous.cariadtest.data.Resource
-import com.firdous.cariadtest.data.response.PoiResponse
+import com.firdous.cariadtest.domain.model.PoiResponseEntity
 import com.firdous.cariadtest.databinding.FragmentPoiMapBinding
 import com.firdous.cariadtest.ui.delegate.ReloadApi
 import com.firdous.cariadtest.ui.delegate.ReloadApiImpl
@@ -23,11 +24,10 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.coroutines.flow.collectLatest
-import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import timber.log.Timber
 
-class PoiMapFragment : BaseFragment(), OnMapReadyCallback, ReloadApi by ReloadApiImpl() {
+class PoiMapFragment : Fragment(), OnMapReadyCallback, ReloadApi by ReloadApiImpl() {
 
     private lateinit var binding: FragmentPoiMapBinding
     private lateinit var gMap: GoogleMap
@@ -44,13 +44,14 @@ class PoiMapFragment : BaseFragment(), OnMapReadyCallback, ReloadApi by ReloadAp
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if (viewModel.isInternetConnected().not()) {
+            activity?.showToast(getString(R.string.msg_no_internet))
+        }
         val mapFragment = childFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
         viewModel.getPoiList()
-        callApiEveryXDuration(DELAY_30_SECOND) {
-            viewModel.getPoiList()
-        }
+        viewModel.callApiEveryXDuration()
         setupObserver()
     }
 
@@ -82,7 +83,7 @@ class PoiMapFragment : BaseFragment(), OnMapReadyCallback, ReloadApi by ReloadAp
         }
     }
 
-    private fun updatePoiOnMap(pois: PoiResponse) {
+    private fun updatePoiOnMap(pois: PoiResponseEntity) {
         if (this::gMap.isInitialized) {
             gMap.clear()
             val builder = LatLngBounds.Builder()

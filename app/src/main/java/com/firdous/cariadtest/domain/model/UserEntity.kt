@@ -1,10 +1,10 @@
-package com.firdous.cariadtest.data.response
+package com.firdous.cariadtest.domain.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class User(
+data class UserEntity(
     val APIKey: String?,
     val CurrentSessionToken: String?,
     val DateCreated: String?,

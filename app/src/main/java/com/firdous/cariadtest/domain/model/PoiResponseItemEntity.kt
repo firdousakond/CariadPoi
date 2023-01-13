@@ -1,13 +1,13 @@
-package com.firdous.cariadtest.data.response
+package com.firdous.cariadtest.domain.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class PoiResponseItem(
-    val AddressInfo: AddressInfo? = null,
-    val Connections: List<Connection>?= null,
-    val DataProvider: DataProvider?= null,
+data class PoiResponseItemEntity(
+    val AddressInfo: AddressInfoEntity? = null,
+    val Connections: List<ConnectionEntity>?= null,
+    val DataProvider: DataProviderEntity?= null,
     val DataProviderID: Int?= null,
     val DataQualityLevel: Int?= null,
     val DateCreated: String?= null,
@@ -18,7 +18,7 @@ data class PoiResponseItem(
     val IsRecentlyVerified: Boolean?= null,
     val NumberOfPoints: Int?= null,
     val OperatorID: Int?= null,
-    val OperatorInfo: OperatorInfo?= null,
+    val OperatorInfo: OperatorInfoEntity?= null,
     val OperatorsReference: String?= null,
     val ParentChargePointID: String?= null,
     val PercentageSimilarity: String?= null,
@@ -27,7 +27,7 @@ data class PoiResponseItem(
     val UUID: String?= null,
     val UsageCost: String?= null,
     val UsageTypeID: Int?= null,
-    val UserComments: List<UserComment>?= null
+    val UserComments: List<UserCommentEntity>?= null
 ):Parcelable
 {
     fun getNumberOfChargingPoint(): String {

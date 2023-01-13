@@ -1,10 +1,7 @@
 package com.firdous.cariadtest
 
 import android.app.Application
-import com.firdous.cariadtest.di.networkModule
-import com.firdous.cariadtest.di.repositoryModule
-import com.firdous.cariadtest.di.useCaseModule
-import com.firdous.cariadtest.di.viewModelModule
+import com.firdous.cariadtest.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -21,7 +18,8 @@ class MainApp : Application() {
                     networkModule,
                     repositoryModule,
                     useCaseModule,
-                    viewModelModule
+                    viewModelModule,
+                    uiModule
                 )
             )
         }

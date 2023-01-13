@@ -1,10 +1,10 @@
-package com.firdous.cariadtest.data.response
+package com.firdous.cariadtest.domain.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class ConnectionType(
+data class ConnectionTypeEntity(
     val FormalName: String?,
     val ID: Int?,
     val IsDiscontinued: Boolean?,

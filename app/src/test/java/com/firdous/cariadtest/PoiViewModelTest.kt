@@ -1,8 +1,8 @@
 package com.firdous.cariadtest
 
 import com.firdous.cariadtest.data.Resource
-import com.firdous.cariadtest.data.response.PoiResponse
-import com.firdous.cariadtest.data.response.PoiResponseItem
+import com.firdous.cariadtest.domain.model.PoiResponseEntity
+import com.firdous.cariadtest.domain.model.PoiResponseItemEntity
 import com.firdous.cariadtest.domain.usecase.PoiUseCase
 import com.firdous.cariadtest.ui.PoiViewModel
 import kotlinx.coroutines.*
@@ -39,10 +39,10 @@ class PoiViewModelTest {
     @Test
     fun `fetch poi list - success response`() = runTest(UnconfinedTestDispatcher()) {
 
-        val poiResponse = PoiResponse()
+        val poiResponse = PoiResponseEntity()
         val data = listOf(
-            PoiResponseItem(OperatorID = 100, NumberOfPoints = 5),
-            PoiResponseItem(OperatorID = 150, NumberOfPoints = 10)
+            PoiResponseItemEntity(OperatorID = 100, NumberOfPoints = 5),
+            PoiResponseItemEntity(OperatorID = 150, NumberOfPoints = 10)
         )
         poiResponse.addAll(data)
 

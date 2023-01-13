@@ -1,7 +1,7 @@
 package com.firdous.cariadtest.domain.usecase
 
 import com.firdous.cariadtest.data.Resource
-import com.firdous.cariadtest.data.response.PoiResponse
+import com.firdous.cariadtest.domain.model.PoiResponseEntity
 import com.firdous.cariadtest.domain.repository.IPoiRepo
 import kotlinx.coroutines.flow.Flow
 
@@ -11,6 +11,6 @@ class PoiUseCase (private val poiRepo: IPoiRepo) {
         distance: Int,
         latitude: Double,
         longitude: Double
-    ): Flow<Resource<PoiResponse>> = poiRepo.getPoiList(key,distance,latitude,longitude)
+    ): Flow<Resource<PoiResponseEntity>> = poiRepo.getPoiList(key,distance,latitude,longitude)
 
 }

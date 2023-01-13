@@ -1,18 +1,18 @@
-package com.firdous.cariadtest.data.response
+package com.firdous.cariadtest.domain.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Connection(
+data class ConnectionEntity(
     val Amps: Int?,
     val Comments: String?,
-    val ConnectionType: ConnectionType?,
+    val ConnectionType: ConnectionTypeEntity?,
     val ConnectionTypeID: Int?,
-    val CurrentType: CurrentType?,
+    val CurrentType: CurrentTypeEntity?,
     val CurrentTypeID: Int?,
     val ID: Int?,
-    val Level: Level?,
+    val Level: LevelEntity?,
     val LevelID: Int?,
     val PowerKW: Double?,
     val Quantity: Int?,

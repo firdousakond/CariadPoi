@@ -1,6 +1,6 @@
-package com.firdous.cariadtest.data.response
+package com.firdous.cariadtest.domain.model
 
-data class CheckinStatusType(
+data class CheckinStatusTypeEntity(
     val ID: Int?,
     val IsAutomatedCheckin: Boolean?,
     val IsPositive: Boolean?,

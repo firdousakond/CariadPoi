@@ -1,18 +1,18 @@
-package com.firdous.cariadtest.data.response
+package com.firdous.cariadtest.domain.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 import java.lang.StringBuilder
 
 @Parcelize
-data class AddressInfo(
+data class AddressInfoEntity(
     val AccessComments: String?,
     val AddressLine1: String?,
     val AddressLine2: String?,
     val ContactEmail: String?,
     val ContactTelephone1: String?,
     val ContactTelephone2: String?,
-    val Country: Country?,
+    val Country: CountryEntity?,
     val CountryID: Int?,
     val Distance: String?,
     val DistanceUnit: Int?,

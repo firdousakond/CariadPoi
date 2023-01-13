@@ -1,12 +1,11 @@
-package com.firdous.cariadtest.data.response
+package com.firdous.cariadtest.domain.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Level(
-    val Comments: String?,
+data class CurrentTypeEntity(
+    val Description: String?,
     val ID: Int?,
-    val IsFastChargeCapable: Boolean?,
     val Title: String?
 ):Parcelable

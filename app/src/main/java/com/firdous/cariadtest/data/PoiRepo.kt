@@ -1,6 +1,6 @@
 package com.firdous.cariadtest.data
 
-import com.firdous.cariadtest.data.response.PoiResponse
+import com.firdous.cariadtest.domain.model.PoiResponseEntity
 import com.firdous.cariadtest.domain.repository.IPoiRepo
 import kotlinx.coroutines.flow.Flow
 
@@ -12,6 +12,6 @@ class PoiRepo(
         distance: Int,
         latitude: Double,
         longitude: Double
-    ): Flow<Resource<PoiResponse>>  = remoteDataSource.getPoiList(key,distance,latitude,longitude)
+    ): Flow<Resource<PoiResponseEntity>>  = remoteDataSource.getPoiList(key,distance,latitude,longitude)
 
 }

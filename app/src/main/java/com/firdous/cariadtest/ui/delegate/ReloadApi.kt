@@ -1,5 +1,5 @@
 package com.firdous.cariadtest.ui.delegate
 
 interface ReloadApi {
-    fun callApiEveryXDuration(delay: Long, apiCall: () -> Unit)
+    fun fetchPoiDataEveryXSeconds(delay: Long, apiCall: () -> Unit)
 }

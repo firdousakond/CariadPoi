@@ -1,10 +1,10 @@
-package com.firdous.cariadtest.data.response
+package com.firdous.cariadtest.domain.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class UserComment(
+data class UserCommentEntity(
     val ChargePointID: Int?,
     val CheckinStatusTypeID: Int?,
     val Comment: String?,
