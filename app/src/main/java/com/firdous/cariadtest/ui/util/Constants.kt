@@ -1,4 +1,4 @@
-package com.firdous.cariadtest.util
+package com.firdous.cariadtest.ui.util
 
 const val DEFAULT_LATITUDE = 52.526
 const val DEFAULT_LONGITUDE = 13.415

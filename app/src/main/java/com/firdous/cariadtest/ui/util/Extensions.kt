@@ -1,4 +1,4 @@
-package com.firdous.cariadtest.util
+package com.firdous.cariadtest.ui.util
 
 import android.content.Context
 import android.view.View

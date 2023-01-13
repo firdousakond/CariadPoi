@@ -15,6 +15,9 @@ import com.firdous.cariadtest.domain.model.PoiResponseEntity
 import com.firdous.cariadtest.databinding.FragmentPoiMapBinding
 import com.firdous.cariadtest.ui.delegate.ReloadApi
 import com.firdous.cariadtest.ui.delegate.ReloadApiImpl
+import com.firdous.cariadtest.ui.util.hide
+import com.firdous.cariadtest.ui.util.show
+import com.firdous.cariadtest.ui.util.showToast
 import com.firdous.cariadtest.util.*
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap

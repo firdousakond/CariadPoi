@@ -5,8 +5,8 @@ import com.firdous.cariadtest.data.Resource
 import com.firdous.cariadtest.data.network.ApiService
 import com.firdous.cariadtest.domain.model.PoiResponseEntity
 import com.firdous.cariadtest.domain.model.PoiResponseItemEntity
-import com.firdous.cariadtest.util.DEFAULT_LATITUDE
-import com.firdous.cariadtest.util.DEFAULT_LONGITUDE
+import com.firdous.cariadtest.ui.util.DEFAULT_LATITUDE
+import com.firdous.cariadtest.ui.util.DEFAULT_LONGITUDE
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
